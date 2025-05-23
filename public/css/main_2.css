@@ -1,0 +1,469 @@
+
+.bg-form{
+  position: relative;
+  background-image: url(../images/bg_thienyet.jpg);
+  width: 100%;
+  height: 99vh;
+}
+.button {
+    background-color: #a9dadf;
+    border: none;
+    color: #083331;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+.guiem{
+  font-weight: bold;
+  font-size: 50px;
+  font-style: oblique;
+  width: 50%;
+  top: 10%;
+  left: 40%;
+  z-index: 9;
+  position: absolute;
+  color: #032e28;
+}
+/* note */
+.note {
+  /* width: 50%; */
+  top: 20%;
+  left: 17%;
+  z-index: 9;
+  position: absolute;
+  display: none;
+}
+.text-name {
+  top: 2%;
+  left: 15%;
+  right: 5%;
+  bottom: 15%;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: x-large;
+  font-family: serif;
+  animation: type-text 4s steps(40);
+}
+.text-loichuc {
+  top: 16%;
+  left: 10%;
+  right: 5%;
+  bottom: 5%;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: x-large;
+  font-family: cursive;
+  animation: type-text 4s steps(40);
+}
+
+.text-1, .text-2, .text-3, .text-4, .text-5, .text-6{
+  left: 10%;
+  right: 5%;
+  bottom: 5%;
+  position: absolute;
+  word-break: break-word;
+  font-size: 30px;
+  font-family: Arial, Helvetica, system-ui;
+}
+.text-1{
+  opacity: 0;
+  top: 23%;
+  animation-delay: 3s;
+  animation: showtext 1s linear forwards;
+}
+.text-2{
+  opacity: 0;
+  top: 30%;
+  animation-delay: 6s;
+  animation: showtext 2s linear forwards;
+}
+.text-3{
+  opacity: 0;
+  top: 37%;
+  animation-delay: 9s;
+  animation: showtext 3s linear forwards;
+}
+.text-4{
+  opacity: 0;
+  top: 44%;
+  animation-delay: 12s;
+  animation: showtext 4s linear forwards;
+}
+.text-5{
+  opacity: 0;
+  top: 52%;
+  animation-delay: 15s;
+  animation: showtext 5s linear forwards;
+}
+.text-6{
+  opacity: 0;
+  top: 60%;
+  animation-delay: 18s;
+  animation: showtext 6s linear forwards;
+}
+@keyframes type-text {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes showtext {
+  0% {  
+      font-size: 5px;
+      opacity: 0;
+  }
+  100% {  
+      font-size: 15px;
+      opacity: 1;
+  }
+}
+/* button */
+.button{
+  font-size: 14px;
+  margin: 4px 2px;
+  padding: 15px 20px;
+}
+.btn-click{
+  z-index: 9;
+  position: absolute;
+  top: 78%;
+  left: 48%;
+  background: rgb(255, 224, 224);
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 5px;
+  border: rgb(255, 224, 224) 1px solid;
+  padding: 18px 25px;
+  font-size: 15px;
+}
+.btn-click:hover{
+  background: rgb(230, 8, 8);
+  color: rgb(255, 224, 224);
+}
+/* avt */
+img {
+  width: 100%;
+}
+.imgkhungloichuc{
+  width: 50%;
+}
+.avt-box{
+  top: 20%;
+  left: 40%;
+	display: block;
+	padding:1px;
+	background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+	z-index:9;
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 4px solid #2a3cad;
+  color: white;
+  /* padding: 20px; */
+}
+.avt-box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.avt-box:hover:before{
+  transform: skewX(-5deg);
+}
+.avt-box .profile_avt{
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  border:1px solid #f0a591;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+.avt-box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+.avt-box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.avt-box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.avt-box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.avt-box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+
+.avt-box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform:scaleX(0);
+    transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+    transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+    transform-origin: right;
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+    transform-origin: right;
+    
+  }
+} 
+/* snow */
+.snow {
+  color: #ff0000;
+  position: fixed;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-size: 30px;
+  border-left: 1px solid rgb(21, 144, 226);
+  border-right: thick solid rgb(7, 139, 228, 0.5);
+  animation: fly 5s linear infinite, fluctuate 2s ease-in-out infinite alternate, rotate 2s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+      top: 100%;
+  }
+
+  100% {
+      top: 0%;
+  }
+}
+
+@keyframes fluctuate {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(50px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.STARDUST2 {
+  left: 0;
+  z-index: 3;
+  position: absolute;
+  animation: move 20s forwards infinite; 
+}
+/* button move*/
+@keyframes move {
+  0%    { opacity: 1; left: 0; top: 10%; display: block;}
+
+  20%   { opacity: 1; left: 0%; top: 85%; display: block;}
+
+  40%   { opacity: 1; left: 75%; top: 85%; display: block;}
+
+  60%   { opacity: 1; left: 75%; top: 5%; display: block;}
+
+  100%  { opacity: 1; left: 0%; top: 5%; display: block;}
+
+}
+.gifanh{
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (min-width: 320px) and (max-width: 414px) {
+  .imgkhungloichuc {
+    width: 100%;
+  }
+  .avt-box{
+    top: 30%;
+    left: 10%;
+    display: block;
+    padding:1px;
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    z-index:9;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border: 4px solid #2a3cad;
+    color: white;
+    /* padding: 20px; */
+  }
+  /* button */
+  .btn-click{
+    z-index: 9;
+    position: absolute;
+    top: 73%;
+    left: 40%;
+    background: rgb(255, 224, 224);
+    font-weight: bold;
+    color: #ff0000;
+    margin-top: 5px;
+    border: rgb(255, 224, 224) 1px solid;
+    padding: 15px 15px;
+    font-size: 15px;
+  }
+  .note {
+    width: 90%;
+    top: 20%;
+    left: 5%;
+    z-index: 9;
+    position: absolute;
+    display: none;
+  }
+  .text-name {
+    top: 0%;
+    left: 16%;
+    right: 5%;
+    bottom: 5%;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .text-loichuc {
+    top: 12%;
+    left: 25%;
+    right: 5%;
+    bottom: 5%;
+    font-size: 15px;
+  }
+  
+  .text-1, .text-2, .text-3, .text-4, .text-5, .text-6{
+    left: 18%;
+    right: 5%;
+    bottom: 5%;
+    position: absolute;
+    word-break: break-word;
+    font-size: 10px;
+    font-family: Arial, Helvetica, system-ui;
+  }
+  .text-1{
+    opacity: 0;
+    top: 20%;
+    animation-delay: 3s;
+    animation: showtext 1s linear forwards;
+  }
+  .text-2{
+    opacity: 0;
+    top: 27%;
+    animation-delay: 6s;
+    animation: showtext 2s linear forwards;
+  }
+  .text-3{
+    opacity: 0;
+    top: 35%;
+    animation-delay: 9s;
+    animation: showtext 3s linear forwards;
+  }
+  .text-4{
+    opacity: 0;
+    top: 42%;
+    animation-delay: 12s;
+    animation: showtext 4s linear forwards;
+  }
+  .text-5{
+    opacity: 0;
+    top: 49%;
+    animation-delay: 15s;
+    animation: showtext 5s linear forwards;
+  }
+  .text-6{
+    opacity: 0;
+    top: 57%;
+    animation-delay: 18s;
+    animation: showtext 6s linear forwards;
+  }
+  @keyframes showtext {
+    0% {  
+        font-size: 5px;
+        opacity: 0;
+    }
+    100% {  
+        font-size: 9px;
+        opacity: 1;
+    }
+  }
+  .gifanh{
+    width: 50px;
+    height: 50px;
+  }
+  .STARDUST2 {
+    left: 0;
+    z-index: 3;
+    position: absolute;
+    animation: move 20s forwards infinite; 
+  }
+  /* button move*/
+  @keyframes move {
+    0%    { opacity: 1; left: 0; top: 10%; display: block;}
+  
+    20%   { opacity: 1; left: 0%; top: 80%; display: block;}
+  
+    40%   { opacity: 1; left: 20%; top: 80%; display: block;}
+  
+    60%   { opacity: 1; left: 20%; top: 5%; display: block;}
+  
+    100%  { opacity: 1; left: 0%; top: 5%; display: block;}
+  
+  }
+}
